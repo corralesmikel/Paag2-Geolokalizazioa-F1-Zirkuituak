@@ -64,15 +64,6 @@ h1, .circuits-container {
   font-size: 13px;
 }
 
-/* Canvas encima de todo */
-#liquidCanvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1; /* Detrás del contenido */
-  pointer-events: none; /* No bloquea clicks */
-}
-
 @media screen and (max-width: 768px) {
   .circuit {
     width: 100%;
