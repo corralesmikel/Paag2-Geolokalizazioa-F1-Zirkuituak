@@ -2,8 +2,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
-  background-color: black; /* Fondo negro */
-  color: white; /* Texto en blanco */
+  background-color: rgb(255, 255, 255); /* Fondo blanco */
+  color: rgb(0, 0, 0); /* Texto en negro */
   overflow-x: hidden;
   position: relative;
 }
@@ -14,6 +14,11 @@ h1 {
   position: relative;
   z-index: 2;
 }
+
+h1, .circuits-container {
+    font-family: 'Orbitron', sans-serif;
+}
+
 
 .circuits-container {
   display: flex;
@@ -27,7 +32,7 @@ h1 {
 .circuit {
   display: flex;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.1); /* Transparente para efecto líquido */
+  background-color: rgba(156, 156, 156, 0.175); /* Transparente para efecto líquido */
   border-radius: 8px;
   width: calc(50% - 10px);
   box-sizing: border-box;

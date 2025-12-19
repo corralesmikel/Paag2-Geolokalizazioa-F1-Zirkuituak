@@ -38,6 +38,18 @@ fetch(url, {
         const container = document.getElementById("circuits");
         container.innerHTML = "";
 
+        // Comprobar si la API devolvió datos
+        if (!data.response || data.response.length === 0) {
+            const placeholder = document.createElement("div");
+            placeholder.classList.add("circuit-placeholder");
+            placeholder.innerHTML = `
+            <p>No se pudieron cargar los circuitos.</p>
+            <p>Intenta más tarde o verifica tu límite de API.</p>
+        `;
+            container.appendChild(placeholder);
+            return; // Salimos de la función
+        }
+
         const filtrados = data.response.filter(circuit =>
             circuitos2025.includes(circuit.name)
         );
@@ -47,17 +59,17 @@ fetch(url, {
             div.classList.add("circuit");
 
             div.innerHTML = `
-      <img src="${circuit.image}" alt="${circuit.name}">
-      <div class="info">
-        <h2>${circuit.name}</h2>
-        <p><strong>Gran Premio:</strong> ${circuit.competition.name}</p>
-        <p><strong>Ubicación:</strong> ${circuit.competition.location.city}, ${circuit.competition.location.country}</p>
-        <p><strong>Primera carrera:</strong> ${circuit.first_grand_prix}</p>
-        <p><strong>Vueltas:</strong> ${circuit.laps}</p>
-        <p><strong>Longitud:</strong> ${circuit.length}</p>
-        <p><strong>Récord:</strong> ${circuit.lap_record.time} – ${circuit.lap_record.driver} (${circuit.lap_record.year})</p>
-      </div>
-    `;
+            <img src="${circuit.image}" alt="${circuit.name}">
+            <div class="info">
+                <h2>${circuit.name}</h2>
+                <p><strong>Gran Premio:</strong> ${circuit.competition.name}</p>
+                <p><strong>Ubicación:</strong> ${circuit.competition.location.city}, ${circuit.competition.location.country}</p>
+                <p><strong>Primera carrera:</strong> ${circuit.first_grand_prix}</p>
+                <p><strong>Vueltas:</strong> ${circuit.laps}</p>
+                <p><strong>Longitud:</strong> ${circuit.length}</p>
+                <p><strong>Récord:</strong> ${circuit.lap_record.time} – ${circuit.lap_record.driver} (${circuit.lap_record.year})</p>
+            </div>
+        `;
 
             container.appendChild(div);
 
@@ -69,4 +81,16 @@ fetch(url, {
             );
         });
     })
-    .catch(error => console.error("Error al obtener los circuitos:", error));
+    .catch(error => {
+        console.error("Error al obtener los circuitos:", error);
+        const container = document.getElementById("circuits");
+        container.innerHTML = "";
+
+        const placeholder = document.createElement("div");
+        placeholder.classList.add("circuit-placeholder");
+        placeholder.innerHTML = `
+        <p>No se pudieron cargar los circuitos. 😢</p>
+        <p>Intenta más tarde o verifica tu límite de API.</p>
+    `;
+        container.appendChild(placeholder);
+    });
