@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: black; /* Fondo negro */
+  color: white; /* Texto en blanco */
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.circuits-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.circuit {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1); /* Transparente para efecto líquido */
+  border-radius: 8px;
+  width: calc(50% - 10px);
+  box-sizing: border-box;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transform: translateX(0);
+}
+
+.circuit img {
+  width: 150px;
+  height: 100px;
+  object-fit: fill;
+  border-radius: 5px;
+}
+
+.circuit .info {
+  padding: 0 15px;
+  flex: 1;
+}
+
+.circuit h2 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+.circuit p {
+  margin: 3px 0;
+  font-size: 13px;
+}
+
+/* Canvas encima de todo */
+#liquidCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Detrás del contenido */
+  pointer-events: none; /* No bloquea clicks */
+}
+
+@media screen and (max-width: 768px) {
+  .circuit {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .circuit img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+}
+
+.quote-row {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-style: italic;
+  font-size: 14px;
+  color: #0ff; /* azul neon para resaltar */
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3; /* encima de todo */
+}
+body {
+  padding-top: 40px; /* para que no tape el quote */
+}
