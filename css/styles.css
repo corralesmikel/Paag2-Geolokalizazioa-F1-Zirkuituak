@@ -1,13 +1,78 @@
+/* -----------------------------
+   Body y tipografía
+------------------------------ */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Orbitron', Arial, sans-serif;
   margin: 0;
-  padding: 20px;
-  background-color: rgb(255, 255, 255); /* Fondo blanco */
-  color: rgb(0, 0, 0); /* Texto en negro */
+  padding: 80px 20px 20px 20px;
+  /* espacio para navbar + quote */
+  background-color: #ffffff;
+  /* Fondo negro */
+  color: #000000;
+  /* Texto blanco */
   overflow-x: hidden;
   position: relative;
 }
 
+/* -----------------------------
+   Navbar superior
+------------------------------ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 4;
+  padding: 10px 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 20px;
+}
+
+.navbar ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ff0000;
+}
+
+/* -----------------------------
+   Quote de Kimi
+------------------------------ */
+.quote-row {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-style: italic;
+  font-size: 14px;
+  color: #0ff;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 50px;
+  /* debajo del navbar */
+  left: 0;
+  z-index: 3;
+}
+
+/* -----------------------------
+   Títulos
+------------------------------ */
 h1 {
   text-align: center;
   margin-bottom: 30px;
@@ -15,11 +80,9 @@ h1 {
   z-index: 2;
 }
 
-h1, .circuits-container {
-    font-family: 'Orbitron', sans-serif;
-}
-
-
+/* -----------------------------
+   Contenedor de circuitos
+------------------------------ */
 .circuits-container {
   display: flex;
   flex-wrap: wrap;
@@ -29,10 +92,13 @@ h1, .circuits-container {
   z-index: 2;
 }
 
+/* -----------------------------
+   Cada circuito
+------------------------------ */
 .circuit {
   display: flex;
   align-items: center;
-  background-color: rgba(156, 156, 156, 0.175); /* Transparente para efecto líquido */
+  background-color: rgba(156, 156, 156, 0.175);
   border-radius: 8px;
   width: calc(50% - 10px);
   box-sizing: border-box;
@@ -64,33 +130,19 @@ h1, .circuits-container {
   font-size: 13px;
 }
 
+/* -----------------------------
+   Responsivo
+------------------------------ */
 @media screen and (max-width: 768px) {
   .circuit {
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .circuit img {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
   }
-}
-
-.quote-row {
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-  font-style: italic;
-  font-size: 14px;
-  color: #0ff; /* azul neon para resaltar */
-  background-color: rgba(0,0,0,0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 3; /* encima de todo */
-}
-body {
-  padding-top: 40px; /* para que no tape el quote */
 }
