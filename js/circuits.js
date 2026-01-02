@@ -79,6 +79,14 @@ fetch(url, {
                 { x: fromX, opacity: 0 },
                 { x: 0, opacity: 1, duration: 1, delay: index * 0.2, ease: "power3.out" }
             );
+
+            // Hacer el bloque clicable
+            div.style.cursor = "pointer";
+
+            div.addEventListener("click", () => {
+                const circuitName = encodeURIComponent(circuit.name);
+                window.location.href = `map.html?circuit=${circuitName}`;
+            });
         });
     })
     .catch(error => {

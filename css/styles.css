@@ -15,6 +15,23 @@ body {
 }
 
 /* -----------------------------
+   Responsivo
+------------------------------ */
+@media screen and (max-width: 768px) {
+  .circuit {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .circuit img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+}
+
+/* -----------------------------
    Navbar superior
 ------------------------------ */
 .navbar {
@@ -131,18 +148,30 @@ h1 {
 }
 
 /* -----------------------------
-   Responsivo
+   Hover en circuitos (feedback UX)
 ------------------------------ */
-@media screen and (max-width: 768px) {
-  .circuit {
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.circuit {
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
 
-  .circuit img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
+.circuit:hover {
+  transform: translateY(-6px) scale(1.01);
+  background-color: rgba(255, 0, 0, 0.08);
+  box-shadow:
+    0 10px 30px rgba(255, 0, 0, 0.35),
+    0 0 12px rgba(255, 0, 0, 0.25);
+}
+
+/* -----------------------------
+   Mapa
+------------------------------ */
+#map {
+  width: 100%;
+  height: 80vh;
+  margin-top: 20px;
+  border-radius: 10px;
 }
