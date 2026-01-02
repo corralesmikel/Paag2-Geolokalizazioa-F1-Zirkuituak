@@ -1,31 +1,6 @@
 const url = "https://v1.formula-1.api-sports.io/circuits";
 
-const circuitos2025 = [
-    "Albert Park Circuit",
-    "Shanghai International Circuit",
-    "Suzuka Circuit",
-    "Bahrain International Circuit",
-    "Jeddah Corniche Circuit",
-    "Miami International Autodrome",
-    "Autodromo Enzo e Dino Ferrari",
-    "Circuit de Monaco",
-    "Circuit de Barcelona-Catalunya",
-    "Circuit Gilles-Villeneuve",
-    "Red Bull Ring",
-    "Silverstone Circuit",
-    "Spa-Francorchamps",
-    "Hungaroring",
-    "Zandvoort",
-    "Autodromo Nazionale Monza",
-    "Baku City Circuit",
-    "Marina Bay Street Circuit",
-    "Circuit of the Americas",
-    "Autodromo Hermanos Rodriguez",
-    "Autodromo Jose Carlos Pace",
-    "Las Vegas Strip Circuit",
-    "Lusail International Circuit",
-    "Yas Marina Circuit"
-];
+import { circuitos2025 } from './circuitsList.js';
 
 fetch(url, {
     method: "GET",
@@ -97,7 +72,7 @@ fetch(url, {
         const placeholder = document.createElement("div");
         placeholder.classList.add("circuit-placeholder");
         placeholder.innerHTML = `
-        <p>No se pudieron cargar los circuitos. 😢</p>
+        <p>No se pudieron cargar los circuitos.</p>
         <p>Intenta más tarde o verifica tu límite de API.</p>
     `;
         container.appendChild(placeholder);

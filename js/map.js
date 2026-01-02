@@ -1,31 +1,6 @@
 const url = "https://v1.formula-1.api-sports.io/circuits";
 
-const circuitos2025 = [
-    "Albert Park Circuit",
-    "Shanghai International Circuit",
-    "Suzuka Circuit",
-    "Bahrain International Circuit",
-    "Jeddah Corniche Circuit",
-    "Miami International Autodrome",
-    "Autodromo Enzo e Dino Ferrari",
-    "Circuit de Monaco",
-    "Circuit de Barcelona-Catalunya",
-    "Circuit Gilles-Villeneuve",
-    "Red Bull Ring",
-    "Silverstone Circuit",
-    "Spa-Francorchamps",
-    "Hungaroring",
-    "Zandvoort",
-    "Autodromo Nazionale Monza",
-    "Baku City Circuit",
-    "Marina Bay Street Circuit",
-    "Circuit of the Americas",
-    "Autodromo Hermanos Rodriguez",
-    "Autodromo Jose Carlos Pace",
-    "Las Vegas Strip Circuit",
-    "Lusail International Circuit",
-    "Yas Marina Circuit"
-];
+import { circuitos2025 } from './circuitsList.js';
 
 // Leer parámetro de la URL
 const params = new URLSearchParams(window.location.search);
@@ -76,7 +51,13 @@ fetch(url, {
 
             if (!coords) continue;
 
-            const marker = L.marker([coords.lat, coords.lon])
+            const marker = L.marker([coords.lat, coords.lon], {
+                icon: L.icon({
+                    iconUrl: 'img/f1.png', // icono personalizado
+                    iconSize: [30, 30],
+                    iconAnchor: [15, 30]
+                })
+            })
                 .addTo(map)
                 .bindPopup(`
         <strong>${circuit.name}</strong><br>
@@ -84,7 +65,7 @@ fetch(url, {
         ${circuit.competition.name}
     `);
 
-            // 👉 Si este es el circuito seleccionado, hacer zoom
+            // Si este es el circuito seleccionado, hacer zoom
             if (selectedCircuit && circuit.name === selectedCircuit) {
                 map.setView([coords.lat, coords.lon], 13, { animate: true });
                 marker.openPopup();
@@ -93,3 +74,28 @@ fetch(url, {
         }
     })
     .catch(err => console.error("Error cargando mapa:", err));
+
+// Cargar hoteles
+fetch('../data/hotels.json')
+    .then(res => res.json())
+    .then(data => {
+        data.hotels.forEach(circuitHotels => {
+            circuitHotels.hotels.forEach(hotel => {
+                L.marker([hotel.lat, hotel.lon], {
+                    icon: L.icon({
+                        iconUrl: 'img/hotel-icon.png', // icono personalizado
+                        iconSize: [30, 30],
+                        iconAnchor: [15, 30]
+                    })
+                })
+                    .addTo(map)
+                    .bindPopup(`
+                    <strong>${hotel.name}</strong><br>
+                    ${hotel.stars} estrellas<br>
+                    $${hotel.price_per_night} por noche<br>
+                    ${hotel.description}
+                `);
+            });
+        });
+    })
+    .catch(err => console.error("Error cargando hoteles:", err));

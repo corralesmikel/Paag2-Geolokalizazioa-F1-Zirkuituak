@@ -1,0 +1,91 @@
+{
+    "hotels": [
+        {
+            "circuit": "Albert Park Circuit",
+            "hotels": [
+                {
+                    "name": "Grand Melbourne Hotel",
+                    "lat": -37.843,
+                    "lon": 144.978,
+                    "stars": 5,
+                    "price_per_night": 250,
+                    "description": "Hotel de lujo a 5 min del circuito."
+                },
+                {
+                    "name": "Parkside Inn",
+                    "lat": -37.846,
+                    "lon": 144.972,
+                    "stars": 4,
+                    "price_per_night": 120,
+                    "description": "Cómodo hotel con vistas al lago."
+                },
+                {
+                    "name": "Budget Stay Melbourne",
+                    "lat": -37.848,
+                    "lon": 144.976,
+                    "stars": 3,
+                    "price_per_night": 80,
+                    "description": "Económico, ideal para estudiantes y fans jóvenes."
+                }
+            ]
+        },
+        {
+            "circuit": "Bahrain International Circuit",
+            "hotels": [
+                {
+                    "name": "Desert Pearl Hotel",
+                    "lat": 26.032,
+                    "lon": 50.510,
+                    "stars": 5,
+                    "price_per_night": 300,
+                    "description": "Hotel premium con piscina y spa."
+                },
+                {
+                    "name": "Sakhir Inn",
+                    "lat": 26.034,
+                    "lon": 50.514,
+                    "stars": 4,
+                    "price_per_night": 150,
+                    "description": "Confortable y moderno, a 10 min del circuito."
+                },
+                {
+                    "name": "Budget Bahrain",
+                    "lat": 26.030,
+                    "lon": 50.518,
+                    "stars": 3,
+                    "price_per_night": 90,
+                    "description": "Económico, cerca de restaurantes locales."
+                }
+            ]
+        },
+        {
+            "circuit": "Suzuka International Racing Course",
+            "hotels": [
+                {
+                    "name": "Suzuka Grand Hotel",
+                    "lat": 34.843,
+                    "lon": 136.541,
+                    "stars": 5,
+                    "price_per_night": 280,
+                    "description": "Hotel de lujo con acceso directo al circuito."
+                },
+                {
+                    "name": "Circuit View Inn",
+                    "lat": 34.841,
+                    "lon": 136.545,
+                    "stars": 4,
+                    "price_per_night": 140,
+                    "description": "Habitaciones con vistas al trazado."
+                },
+                {
+                    "name": "Suzuka Budget Stay",
+                    "lat": 34.839,
+                    "lon": 136.539,
+                    "stars": 3,
+                    "price_per_night": 70,
+                    "description": "Económico, ideal para fans de la F1."
+                }
+            ]
+        }
+    ]
+}
