@@ -11,6 +11,12 @@ const selectedCircuit = params.get("circuit");
 // ==============================
 const map = L.map('map').setView([20, 0], 2);
 
+// Forzar recalculo del mapa en móviles
+setTimeout(() => {
+    map.invalidateSize();
+}, 300);
+
+
 // Capa base OpenStreetMap
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'

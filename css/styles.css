@@ -204,3 +204,42 @@ h1 {
   flex: 1;
   height: 100%;
 }
+
+/* =============================
+   MAPA RESPONSIVE (MÓVIL)
+============================= */
+@media screen and (max-width: 768px) {
+
+  /* Layout mapa + filtros en columna */
+  .map-layout {
+    flex-direction: column;
+    height: calc(100vh - 120px);
+  }
+
+  /* Filtros arriba */
+  .map-filters {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .map-filters h3 {
+    display: none;
+    /* Ocultamos título en móvil */
+  }
+
+  .map-filters label {
+    margin: 0;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  /* Mapa ocupa el resto */
+  #map {
+    height: 100%;
+    min-height: 60vh;
+    border-radius: 0;
+  }
+}
