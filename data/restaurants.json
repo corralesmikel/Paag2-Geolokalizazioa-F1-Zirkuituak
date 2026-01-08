@@ -1,0 +1,91 @@
+{
+    "restaurants": [
+        {
+            "circuit": "Albert Park Circuit",
+            "restaurants": [
+                {
+                    "name": "Red Apex Grill",
+                    "lat": -37.844,
+                    "lon": 144.977,
+                    "type": "Steakhouse",
+                    "price_range": "$$$",
+                    "description": "Carnes premium y ambiente motorsport."
+                },
+                {
+                    "name": "Lap 58 Bistro",
+                    "lat": -37.846,
+                    "lon": 144.974,
+                    "type": "International",
+                    "price_range": "$$",
+                    "description": "Cocina internacional a pasos del circuito."
+                },
+                {
+                    "name": "Turn One Café",
+                    "lat": -37.842,
+                    "lon": 144.975,
+                    "type": "Café",
+                    "price_range": "$",
+                    "description": "Ideal para desayunos rápidos antes de la carrera."
+                }
+            ]
+        },
+        {
+            "circuit": "Suzuka International Racing Course",
+            "restaurants": [
+                {
+                    "name": "Samurai Speed Dining",
+                    "lat": 34.8435,
+                    "lon": 136.542,
+                    "type": "Japanese",
+                    "price_range": "$$$",
+                    "description": "Alta cocina japonesa con temática F1."
+                },
+                {
+                    "name": "Hairpin Ramen",
+                    "lat": 34.842,
+                    "lon": 136.544,
+                    "type": "Ramen",
+                    "price_range": "$$",
+                    "description": "Ramen tradicional favorito de los fans."
+                },
+                {
+                    "name": "Pitlane Sushi",
+                    "lat": 34.841,
+                    "lon": 136.540,
+                    "type": "Sushi",
+                    "price_range": "$$",
+                    "description": "Sushi rápido y fresco cerca del trazado."
+                }
+            ]
+        },
+        {
+            "circuit": "Bahrain International Circuit",
+            "restaurants": [
+                {
+                    "name": "Desert Apex Restaurant",
+                    "lat": 26.0325,
+                    "lon": 50.512,
+                    "type": "Middle Eastern",
+                    "price_range": "$$$",
+                    "description": "Cocina local premium con vistas al desierto."
+                },
+                {
+                    "name": "Sakhir Speed Diner",
+                    "lat": 26.034,
+                    "lon": 50.515,
+                    "type": "American",
+                    "price_range": "$$",
+                    "description": "Hamburguesas y comida rápida para fans."
+                },
+                {
+                    "name": "Turn 10 Snacks",
+                    "lat": 26.030,
+                    "lon": 50.518,
+                    "type": "Fast Food",
+                    "price_range": "$",
+                    "description": "Rápido y económico antes de la quali."
+                }
+            ]
+        }
+    ]
+}

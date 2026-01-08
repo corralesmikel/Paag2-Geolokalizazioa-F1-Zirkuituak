@@ -99,3 +99,35 @@ fetch('../data/hotels.json')
         });
     })
     .catch(err => console.error("Error cargando hoteles:", err));
+
+// Cargar restaurantes
+fetch('../data/restaurants.json')
+    .then(res => res.json())
+    .then(data => {
+        data.restaurants.forEach(circuitRestaurants => {
+
+            // Mostrar solo los del circuito seleccionado (si existe)
+            if (!selectedCircuit || circuitRestaurants.circuit === selectedCircuit) {
+
+                circuitRestaurants.restaurants.forEach(restaurant => {
+                    L.marker([restaurant.lat, restaurant.lon], {
+                        icon: L.icon({
+                            iconUrl: 'img/restaurant-icon.png',
+                            iconSize: [28, 28],
+                            iconAnchor: [14, 28]
+                        })
+                    })
+                        .addTo(map)
+                        .bindPopup(`
+                        <strong>${restaurant.name}</strong><br>
+                        Tipo: ${restaurant.type}<br>
+                        Precio: ${restaurant.price_range}<br>
+                        ${restaurant.description}
+                    `);
+                });
+
+            }
+        });
+    })
+    .catch(err => console.error("Error cargando restaurantes:", err));
+
