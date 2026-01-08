@@ -22,8 +22,32 @@
 
     <h1>Mapa de Circuitos F1 2025</h1>
 
-    <!-- Mapa -->
-    <div id="map"></div>
+    <div class="map-layout">
+
+        <!-- Panel lateral -->
+        <aside class="map-filters">
+            <h3>Filtros</h3>
+
+            <label>
+                <input type="checkbox" id="toggleCircuits" checked>
+                Circuitos
+            </label>
+
+            <label>
+                <input type="checkbox" id="toggleHotels" checked>
+                Hoteles
+            </label>
+
+            <label>
+                <input type="checkbox" id="toggleRestaurants" checked>
+                Restaurantes
+            </label>
+        </aside>
+
+        <!-- Mapa -->
+        <div id="map"></div>
+
+    </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/config.js"></script>
