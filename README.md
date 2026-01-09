@@ -119,15 +119,27 @@ F1-Tracks-2025/
 
 ## Capturas
 
-TODO
+### Página principal – Listado de circuitos F1 2025
+![Página principal](img/captura-index.png)
+
+En esta vista se muestran todos los circuitos de la temporada 2025 de Fórmula 1 con información detallada y animaciones.
+
+---
+
+### Mapa interactivo – Circuitos, hoteles y restaurantes
+![Mapa interactivo](img/captura-mapa.png)
+![Mapa interactivo](img/captura-mapa-completo.png)
+
+Mapa interactivo basado en Leaflet donde se puede visualizar el circuito seleccionado junto a hoteles y restaurantes cercanos, con filtros por capas.
+Si no se selecciona ningun mapa se mostrara el mapa completo.
+
 ---
 
 ## Notas y bugs
 
 - Algunas APIs externas pueden limitar la cantidad de peticiones por día.
 - Nombres de circuitos pueden variar y no coincidir con la lista interna, por lo que algunos circuitos pueden no mostrarse.
-- Se recomienda revisar la geocodificación si algún circuito no se centra correctamente en el mapa.
-- Se documenta el código para facilitar futuras ampliaciones (más circuitos, hoteles o restaurantes).
+- Algunos circuitos pueden no estar correctamente colocados en el mapa.
 
 ---
 
