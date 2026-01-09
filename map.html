@@ -20,38 +20,38 @@
         </ul>
     </nav>
 
-    <h1>Mapa de Circuitos F1 2025</h1>
+    <main class="map-layout-container">
+        <h1>Mapa de Circuitos F1 2025</h1>
+        <div class="map-layout">
 
-    <div class="map-layout">
+            <!-- Panel lateral -->
+            <aside class="map-filters">
+                <h3>Filtros</h3>
 
-        <!-- Panel lateral -->
-        <aside class="map-filters">
-            <h3>Filtros</h3>
+                <label>
+                    <input type="checkbox" id="toggleCircuits" checked>
+                    Circuitos
+                </label>
 
-            <label>
-                <input type="checkbox" id="toggleCircuits" checked>
-                Circuitos
-            </label>
+                <label>
+                    <input type="checkbox" id="toggleHotels" checked>
+                    Hoteles
+                </label>
 
-            <label>
-                <input type="checkbox" id="toggleHotels" checked>
-                Hoteles
-            </label>
+                <label>
+                    <input type="checkbox" id="toggleRestaurants" checked>
+                    Restaurantes
+                </label>
+            </aside>
 
-            <label>
-                <input type="checkbox" id="toggleRestaurants" checked>
-                Restaurantes
-            </label>
-        </aside>
-
-        <!-- Mapa -->
-        <div id="map"></div>
-
-    </div>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="js/config.js"></script>
-    <script type="module" src="js/map.js"></script> <!-- Es type="module" porque hay datos compartidos -->
+            <!-- Mapa -->
+            <div id="map"></div>
+        </div>
+    </main>
 </body>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/config.js"></script>
+<script type="module" src="js/map.js"></script> <!-- Es type="module" porque hay datos compartidos -->
 
 </html>

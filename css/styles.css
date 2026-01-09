@@ -169,9 +169,13 @@ h1 {
 /* -----------------------------
    Layout mapa + filtros
 ------------------------------ */
+.map-layout-container {
+  margin-top: -40px;
+}
+
 .map-layout {
   display: flex;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 150px);
 }
 
 .map-filters {
@@ -205,9 +209,9 @@ h1 {
   height: 100%;
 }
 
-/* =============================
+/* -----------------------------
    MAPA RESPONSIVE (MÓVIL)
-============================= */
+----------------------------- */
 @media screen and (max-width: 768px) {
 
   /* Layout mapa + filtros en columna */
