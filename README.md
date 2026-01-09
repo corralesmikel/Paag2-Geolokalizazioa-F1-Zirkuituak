@@ -90,27 +90,29 @@ El objetivo de este proyecto es ofrecer una manera visual e interactiva de explo
 
 ## Estructura del proyecto
 
+```text
 F1-Tracks-2025/
 │
 ├─ index.html
 ├─ map.html
 ├─ css/
-│ └─ styles.css
+│   └─ styles.css
 ├─ js/
-│ ├─ config.js <- Este archivo no esta incluido este se debe añadir utilizando una api key propia de [ApiSports](https://www.api-football.com/)
-│ ├─ circuits.js
-│ ├─ circuitsList.js
-│ ├─ map.js
-│ └─ quote.js
+│   ├─ config.js <- Este archivo no está incluido, se debe añadir utilizando una API key propia de [ApiSports](https://www.api-sports.io/)
+│   ├─ circuits.js
+│   ├─ circuitsList.js
+│   ├─ map.js
+│   └─ quote.js
 ├─ data/
-│ ├─ hotels.json
-│ └─ restaurants.json
+│   ├─ hotels.json
+│   └─ restaurants.json
 ├─ img/
-│ ├─ favicon.png
-│ ├─ f1.png
-│ ├─ hotel-icon.png
-│ └─ restaurant-icon.png
+│   ├─ favicon.png
+│   ├─ f1.png
+│   ├─ hotel-icon.png
+│   └─ restaurant-icon.png
 └─ README.md
+```
 
 
 ---
