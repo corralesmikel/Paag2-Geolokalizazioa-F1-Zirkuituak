@@ -127,8 +127,8 @@ En esta vista se muestran todos los circuitos de la temporada 2025 de Fórmula 1
 ---
 
 ### Mapa interactivo – Circuitos, hoteles y restaurantes
-![Mapa interactivo](img/captura-mapa.png)
-![Mapa interactivo](img/captura-mapa-completo.png)
+![Mapa interactivo](img/captura-mapa-busqueda.png)
+![Mapa interactivo completo](img/captura-mapa-completo.png)
 
 Mapa interactivo basado en Leaflet donde se puede visualizar el circuito seleccionado junto a hoteles y restaurantes cercanos, con filtros por capas.
 Si no se selecciona ningun mapa se mostrara el mapa completo.
