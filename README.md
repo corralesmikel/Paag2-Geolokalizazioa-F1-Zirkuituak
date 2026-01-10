@@ -36,18 +36,18 @@ Proiektu honen helburua 1 2025 Formulako zirkuituak esploratzeko modu bisual eta
 - **GSAP** animazio leunetarako, zirkuituak eta hitzorduak kargatzean.
 - **Leaflet.js** mapa interaktiboetarako.
 - **OpenStreetMap** mapako oihaletarako eta hirien geokodifikaziorako.
-- **APIs externas**:
+- **Kanpoko API-ak**:
   - [API de Fórmula 1](https://www.api-football.com/) zirkuituen datuak lortzeko.
   - [API de Kimi Quotes](https://kimiquotes.pages.dev/api/quote) esaldiak erakusteko.
-- **JSON local** hotel eta jatetxeetarako zirkuituko.
+- **JSON lokal** hotel eta jatetxeetarako zirkuituko.
 
 ---
 
 ## Erabilitako datuak
 
-- **Circuitos de F1 2025**:  F1eko APItik lortutakoak, zerrendarekin iragazita `circuitsList.js`.
-- **Hoteles y restaurantes**: JSON lokalak (`hotels.json` y `restaurants.json`) zirkuitu bidez antolatuak.
-- **Geocodificación**: OpenStreetMap-eko Nominatimen API, hiria eta herrialdea koordenatu bihurtzeko.
+- **F1 2025 zirkuituak**:  F1eko APItik lortutakoak, zerrendarekin iragazita `circuitsList.js`.
+- **Hotelak eta jatetxeak**: JSON lokalak (`hotels.json` y `restaurants.json`) zirkuitu bidez antolatuak.
+- **Geokodetzea**: OpenStreetMap-eko Nominatimen API, hiria eta herrialdea koordenatu bihurtzeko.
 
 ---
 
@@ -64,27 +64,27 @@ Proiektu honen helburua 1 2025 Formulako zirkuituak esploratzeko modu bisual eta
 
 ## Aplikazioaren erabilera
 
-1. **Página principal (`index.html`)**:
-   - Se muestran todos los circuitos de la temporada 2025.
-   - Cada bloque muestra:
-     - Imagen del circuito
-     - Nombre del circuito
-     - Gran Premio
-     - Ubicación (ciudad y país)
-     - Primera carrera
-     - Número de vueltas y longitud
-     - Récord de vuelta
-   - Al hacer clic en un circuito, se redirige a `map.html` con el circuito seleccionado.
+1. **Orrialde nagusia (`index.html`)**:
+- 2025. denboraldiko zirkuitu guztiak erakusten dira.
+- Bloke bakoitzak hau erakusten du:
+  - Zirkuituaren irudia
+  - Zirkuituaren izena
+  - Sari Nagusia
+  - Kokapena (hiria eta herrialdea)
+  - Lehenengo lasterketa
+  - Bira kopurua eta luzera
+  - Itzulerako errekorra
+- Zirkuitu batean klik egitean, `map.html` ra birbideratzen da hautatutako zirkuituarekin. 
 
-2. **Mapa interactivo (`map.html`)**:
-   - Si se selecciona la pagina de mapa sin seleccionar un circuito se muestra el mapa con todos los ciruitos, restaurantes y hoteles
-   - Si se selecciona el circuito desde la pagina principal se muestra un mapa centrado en el circuito seleccionado.
-   - Capas y filtros:
-     - Circuitos
-     - Hoteles
-     - Restaurantes
-   - Cada marcador es clicable y muestra un popup con información detallada.
-   - Puedes activar o desactivar cada capa desde el panel lateral.
+2. **Mapa elkarreragilea (`map.html`)**:
+- Zirkuitu bat hautatu gabe mapa-orria hautatzen bada, zirujau, jatetxe eta hotel guztien mapa agertuko da.
+- Orri nagusitik zirkuitua hautatuz gero, hautatutako zirkuituan zentratutako mapa bat agertuko da.
+- Geruzak eta iragazkiak:
+  - Zirkuituak
+  - Hotelak
+  - Jatetxeak
+- Markagailu bakoitza klikagarria da eta informazio zehatza duen popup bat erakusten du.
+- Alboko paneletik aktiba edo desaktiba dezakezu geruza bakoitza.
 
 ---
 
@@ -98,7 +98,7 @@ F1-Tracks-2025/
 ├─ css/
 │   └─ styles.css
 ├─ js/
-│   ├─ config.js <- Este archivo no está incluido, se debe añadir utilizando una API key propia de [ApiSports](https://www.api-sports.io/)
+│   ├─ config.js <- Fitxategi hau ez dago sartuta, [ApiSports](https://www.api-sports.io/) ren berezko API key bat erabiliz gehitu behar da
 │   ├─ circuits.js
 │   ├─ circuitsList.js
 │   ├─ map.js
@@ -114,33 +114,32 @@ F1-Tracks-2025/
 └─ README.md
 ```
 
-
 ---
 
 ## Harrapaketak
 
-### Página principal – Listado de circuitos F1 2025
-![Página principal](img/captura-index.png)
+### Orrialde nagusia – F1 2025 zirkuituen zerrenda
+![Orrialde nagusia](img/captura-index.png)
 
-En esta vista se muestran todos los circuitos de la temporada 2025 de Fórmula 1 con información detallada y animaciones.
+Ikuspegi honetan 1 Formulako 2025 denboraldiko zirkuitu guztiak erakusten dira informazio zehatzarekin eta animazioekin.
 
 ---
 
-### Mapa interactivo – Circuitos, hoteles y restaurantes
-![Mapa interactivo](img/captura-mapa-busqueda.png)
-![Mapa interactivo completo](img/captura-mapa-completo.png)
+### Mapa interaktiboa – Zirkuituak, hotelak eta jatetxeak
+![Mapa interaktiboa](img/captura-mapa-busqueda.png)
+![Mapa interaktibo osoa](img/captura-mapa-completo.png)
 
-Mapa interactivo basado en Leaflet donde se puede visualizar el circuito seleccionado junto a hoteles y restaurantes cercanos, con filtros por capas.
-Si no se selecciona ningun mapa se mostrara el mapa completo.
+Leaflet-en oinarritutako mapa interaktiboa. Bertan, aukeratutako zirkuitua ikus daiteke, gertuko hotel eta jatetxeekin batera, geruzakako iragazkiekin.
+Maparik aukeratzen ez bada, mapa osoa agertuko da.
 
 ---
 
 ## Notak eta bug-ak
 
-- Algunas APIs externas pueden limitar la cantidad de peticiones por día.
-- Nombres de circuitos pueden variar y no coincidir con la lista interna, por lo que algunos circuitos pueden no mostrarse.
-- Algunos circuitos pueden no estar correctamente colocados en el mapa.
+- Kanpoko HJA batzuek eguneko eskaera kopurua muga dezakete.
+- Zirkuituen izenak aldatu egin daitezke eta ez datoz bat barne-zerrendarekin; beraz, baliteke zirkuitu batzuk ez erakustea.
+- Baliteke zirkuitu batzuk mapan behar bezala kokatuta ez egotea.
 
 ---
 
-Creado por Mikel Corrales
+Created by Mikel Corrales
