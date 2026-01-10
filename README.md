@@ -1,68 +1,68 @@
 # F1 Tracks 2025
 
-Una aplicación web que muestra los circuitos de la temporada 2025 de Fórmula 1 y, al hacer clic en un circuito, muestra un mapa interactivo con hoteles y restaurantes cercanos.
+Web aplikazio batek 1 Formulako 2025 denboraldiko zirkuituak erakusten ditu eta, zirkuitu batean klik egitean, mapa interaktibo bat erakusten du, gertuko hotel eta jatetxeekin.
 
 ---
 
-## Tabla de contenidos
+## Edukien taula
 
-- [Objetivo](#objetivo)
-- [Tecnologías utilizadas](#tecnologías-utilizadas)
-- [Datos utilizados](#datos-utilizados)
-- [Cómo ejecutar la aplicación](#cómo-ejecutar-la-aplicación)
-- [Uso de la aplicación](#uso-de-la-aplicación)
-- [Estructura del proyecto](#estructura-del-proyecto)
-- [Capturas y videos](#capturas-y-videos)
-- [Notas y bugs](#notas-y-bugs)
-
----
-
-## Objetivo
-
-El objetivo de este proyecto es ofrecer una manera visual e interactiva de explorar los circuitos de la Fórmula 1 2025, permitiendo a los usuarios:
-
-- Consultar información básica de cada circuito (nombre, ubicación, récord de vuelta, vueltas, longitud, primera carrera, Gran Premio).
-- Visualizar la ubicación del circuito en un mapa.
-- Explorar hoteles y restaurantes cercanos a cada circuito.
-- Filtrar visualmente los elementos en el mapa mediante capas: circuitos, hoteles y restaurantes.
-- Mostrar citas divertidas de Kimi Räikkönen mientras se navega.
+- [Helburua](#helburua)
+- [Erabilitako teknologiak](#erabilitako-teknologiak)
+- [Erabilitako datuak](#erabilitako-datuak)
+- [Nola exekutatu aplikazioa](#nola-exekutatu-aplikazioa)
+- [Aplikazioaren erabilera](#aplikazioaren-erabilera)
+- [Proiektuaren egitura](#proiektuaren-egitura)
+- [Harrapaketak](#harrapaketak)
+- [Notak eta bug-ak](#notak-eta-bug-ak) 
 
 ---
 
-## Tecnologías utilizadas
+## Helburua
 
-- **HTML5** y **CSS3** para la estructura y diseño.
-- **JavaScript (ES6 Modules)** para la lógica de la aplicación.
-- **GSAP** para animaciones suaves al cargar los circuitos y citas.
-- **Leaflet.js** para mapas interactivos.
-- **OpenStreetMap** para los tiles del mapa y geocodificación de ciudades.
+Proiektu honen helburua 1 2025 Formulako zirkuituak esploratzeko modu bisual eta interaktiboa eskaintzea da, erabiltzaileei aukera emanez:
+
+- Zirkuitu bakoitzari buruzko oinarrizko informazioa kontsultatu (izena, kokapena, itzulerako errekorra, itzuliak, luzera, lehen lasterketa, Sari Nagusia).
+- Zirkuituaren kokapena mapa batean bistaratzea.
+- Zirkuitu bakoitzetik hurbil dauden hotelak eta jatetxeak esploratzea.
+- Elementuak mapan bisualki iragaztea geruzen bidez: zirkuituak, hotelak eta jatetxeak.
+- Kimi Räikkönenen aipamen dibertigarriak erakutsi nabigatzen ari den bitartean.
+
+---
+
+## Erabilitako teknologiak
+
+- **HTML5** y **CSS3** egitura eta diseinurako.
+- **JavaScript (ES6 Modules)** aplikazioaren logikarako.
+- **GSAP** animazio leunetarako, zirkuituak eta hitzorduak kargatzean.
+- **Leaflet.js** mapa interaktiboetarako.
+- **OpenStreetMap** mapako oihaletarako eta hirien geokodifikaziorako.
 - **APIs externas**:
-  - [API de Fórmula 1](https://www.api-football.com/) para obtener datos de circuitos.
-  - [API de Kimi Quotes](https://kimiquotes.pages.dev/api/quote) para mostrar frases.
-- **JSON local** para hoteles y restaurantes por circuito.
+  - [API de Fórmula 1](https://www.api-football.com/) zirkuituen datuak lortzeko.
+  - [API de Kimi Quotes](https://kimiquotes.pages.dev/api/quote) esaldiak erakusteko.
+- **JSON local** hotel eta jatetxeetarako zirkuituko.
 
 ---
 
-## Datos utilizados
+## Erabilitako datuak
 
-- **Circuitos de F1 2025**: obtenidos de la API de F1, filtrados con la lista `circuitsList.js`.
-- **Hoteles y restaurantes**: JSON locales (`hotels.json` y `restaurants.json`) organizados por circuito.
-- **Geocodificación**: API de Nominatim de OpenStreetMap para convertir ciudad y país en coordenadas.
-
----
-
-## Cómo ejecutar la aplicación
-
-1. Clona o descarga este repositorio.
-2. Asegúrate de tener tu clave de API de F1 en `config.js` como `API_KEY` (Ej: API_KEY="TuCodigoDeApi").
-3. Abre `index.html` en un navegador.
-4. Haz clic en cualquier circuito para navegar al mapa interactivo.
-
-> ⚠️ Nota: Por limitaciones de CORS y APIs externas, se recomienda usar un servidor local como `Live Server` en VSCode.
+- **Circuitos de F1 2025**:  F1eko APItik lortutakoak, zerrendarekin iragazita `circuitsList.js`.
+- **Hoteles y restaurantes**: JSON lokalak (`hotels.json` y `restaurants.json`) zirkuitu bidez antolatuak.
+- **Geocodificación**: OpenStreetMap-eko Nominatimen API, hiria eta herrialdea koordenatu bihurtzeko.
 
 ---
 
-## Uso de la aplicación
+## Nola exekutatu aplikazioa
+
+1. Biltegi hau klonatu edo deskargatu.
+2. Ziurtatu zure F1eko `API` gakoa `API_KEY` gisa `config.js` duzula (adibidez: API_KEY = "TuCodigoDeApi").
+3. Nabigatzaile batean, `index.html` irekitzen du.
+4. Egin klik edozein zirkuitutan mapa interaktibora nabigatzeko.
+
+> ⚠️ Oharra: Kanpoko CORS eta APIen mugak direla eta, VSCode `LiveServer` zerbitzari lokala erabiltzea gomendatzen da.
+
+---
+
+## Aplikazioaren erabilera
 
 1. **Página principal (`index.html`)**:
    - Se muestran todos los circuitos de la temporada 2025.
@@ -88,7 +88,7 @@ El objetivo de este proyecto es ofrecer una manera visual e interactiva de explo
 
 ---
 
-## Estructura del proyecto
+## Proiektuaren egitura
 
 ```text
 F1-Tracks-2025/
@@ -117,7 +117,7 @@ F1-Tracks-2025/
 
 ---
 
-## Capturas
+## Harrapaketak
 
 ### Página principal – Listado de circuitos F1 2025
 ![Página principal](img/captura-index.png)
@@ -135,7 +135,7 @@ Si no se selecciona ningun mapa se mostrara el mapa completo.
 
 ---
 
-## Notas y bugs
+## Notak eta bug-ak
 
 - Algunas APIs externas pueden limitar la cantidad de peticiones por día.
 - Nombres de circuitos pueden variar y no coincidir con la lista interna, por lo que algunos circuitos pueden no mostrarse.
