@@ -25,10 +25,12 @@ fetch(url, {
             return; // Salimos de la función
         }
 
+        // Filtrar circuitos para la temporada 2025
         const filtrados = data.response.filter(circuit =>
             circuitos2025.includes(circuit.name)
         );
 
+        // Crear elementos para cada circuito filtrado
         filtrados.forEach((circuit, index) => {
             const div = document.createElement("div");
             div.classList.add("circuit");

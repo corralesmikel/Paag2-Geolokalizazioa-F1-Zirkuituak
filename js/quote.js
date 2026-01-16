@@ -5,6 +5,7 @@ fetch("https://api.allorigins.win/get?url=" + encodeURIComponent("https://kimiqu
     .then(data => {
         // El contenido real está en data.contents
         const quoteData = JSON.parse(data.contents);
+        // Mostrar la cita en el contenedor
         quoteContainer.textContent = `"${quoteData.quote}" — Kimi Räikkönen (${quoteData.year})`;
 
         gsap.to(quoteContainer, { opacity: 1, duration: 1, ease: "power2.out" });
